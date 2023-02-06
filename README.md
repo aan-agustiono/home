@@ -10,8 +10,8 @@ URL notes learning docs
   <li><a href="https://blog.back4app.com/open-source-serverless-platforms/">https://blog.back4app.com/open-source-serverless-platforms/</a></li>
   <li><a href="https://fission.io/">https://fission.io/</a></li>
   <li><a href="https://github.com/open-lambda">https://github.com/open-lambda</a></li> 
-  <li><a href=""></a></li>
-  <li><a href=""></a></li>
+  <li><a href="https://docs.openfaas.com/">https://docs.openfaas.com/</a></li>
+  <li><a href="https://github.com/dherault/serverless-offline">https://github.com/dherault/serverless-offline</a></li>
 </ul>
 
 
