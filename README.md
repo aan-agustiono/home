@@ -41,7 +41,4 @@
 <li><a href="https://www.forumophilia.com/">forumophilia.com</a></li>
 <li><a href="http://spankbang.com">spankbang.com</a></li>
 </ul>
-				
-			</td></tr>
-	</tbody>
 </table>
