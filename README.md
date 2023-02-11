@@ -2,7 +2,7 @@
 <div id="header"><h1> DEATHSCYTHE [DELL3000] </h1></div>
 <div id="body">
 
-<table>
+<table width="100%">
 	<thead>
 	<tr><th>Link Tools</th><th>Link Stream</th><th>Link Adult</th></tr>
 	</thead>
