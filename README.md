@@ -1,6 +1,5 @@
 
-<div id="header"><h1> DEATHSCYTHE [DELL3000] </h1></div>
-<div id="body">
+<h2> DEATHSCYTHE [DELL3000] </h2>
 
 <table width="100%">
 	<thead>
@@ -46,4 +45,3 @@
 			</td></tr>
 	</tbody>
 </table>
-	
