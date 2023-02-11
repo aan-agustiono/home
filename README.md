@@ -1,77 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Welcome page</title>
-<style type="text/css" media="screen">
-body { background: #e7e7e7; font-family: monospace, Verdana, sans-serif; font-size: 11pt; padding: 0px; }
-#page { background: #ffffff; margin: 2px; border: 2px solid #c0c0c0; padding: 2px; }
-#header { background: #4b6983; border: 2px solid #0000ae; text-align: center; padding: 1px; color: #ffffff; }
-#header h1 { color: #ffffff; }
 
-span.tt { font-family: monospace; }
-span.bold { font-weight: bold; }
-a:link, a:visited, a:active { text-decoration: none; font-weight: bold; color: #999; }
-a:hover { text-decoration: none; color: #00FF00	; }
-table {border-collapse: collapse; border:0;width:100%;box-shadow:1px #ccc;}
-.center {text-align: center;}
-.center table {margin: 1em auto; text-align: left;}
-.center th {text-align: center !important;}
-td, th {border: 1px solid #666; font-size: 100%; vertical-align: baseline; padding: 4px 5px;}
-th {background-color: #ccf; font-weight: bold;}
-.search { padding:8px 8px; background:rgba(50, 50, 50, 0.2); border:0px solid #dbdbdb; }
-.button {
-    position:relative;
-    padding:6px 15px;
-    left:-8px;
-    border:2px solid #53bd84;
-    background-color:#53bd84;
-    color:#fafafa;
-}
-
-.row{display: flex; flex-flow: row wrap}
-.column{flex:1}
-.merge2{flex:2}
-.merge3{flex:3}
-.merge4{flex:4}
-/* add more .merge classes if you need to */
-.row,.merge2,.merge3,.merge4 {margin:0} /* optional gutter */
-
-.nested{padding:0 !important; margin:0 !important; border: 0 !important}
-#main {
- margin: 0 auto;
- width: 100%;
- padding: 1px;
- background-color: #fff;
-}
-
-.column,.merge2,.merge3 {
- color: #fff;
- background-color: #454545;
- padding: 6px;
- margin: 2px;
- text-align: left;
-}
-
-.accordion {
-  background-color: #626262;
-  color: #fff;
-  cursor: pointer;
-  padding: 9px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-.active, .accordion:hover { background-color: #929292; }
-.panel { padding: 0 18px; display: none; overflow: hidden; }
-
-</style>
-</head>
-<body>
-<div id="page">
 <div id="header"><h1> DEATHSCYTHE [DELL3000] </h1></div>
 <div id="body">
  
@@ -126,7 +53,7 @@ th {background-color: #ccf; font-weight: bold;}
 <li><a href="https://github.com/aan-agustiono">github.com</a></li>
 </ul>
 </p></div>
-<!--
+
 <button class="accordion">Link Adult</button>
 <div class="panel"><p>
 <ul>
@@ -142,111 +69,9 @@ th {background-color: #ccf; font-weight: bold;}
 <li><a href="https://www.forumophilia.com/">forumophilia.com</a></li>
 <li><a href="http://spankbang.com">spankbang.com</a></li>
 </ul>
-</p></div>
--->
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>        
-
-    </div>
-    
-    <!-- Column 3 -->
-    <div class="column">
-
-<table>
-<tr valign="top"><td width="20%">Screen</td><td><script>document.write(screen.width+"x"+screen.height);</script> & Colour <script>document.write(screen.pixelDepth);</script></td></tr>
-	<tr valign="top"><td>System</td><td><script>document.write(navigator.platform);</script></td></tr>
-	<tr valign="top"><td>JScript</td><td>
-			<script>document.write("Enable");</script>
-			<noscript>Not support</noscript>
-	</td></tr>
-	<tr><td>Protocol</td><td><script>document.write(window.location.protocol);</script></td></tr>
-	<tr><td>IP</td><td>
-	<b id="ip">Loading..</b>
-	<script>
-	/* ES6 */
-	const findLocalIp = (logInfo = true) => new Promise( (resolve, reject) => {
-		window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-
-		if ( typeof window.RTCPeerConnection == 'undefined' ) return reject('WebRTC not supported by browser');
-
-		let pc = new RTCPeerConnection();
-		let ips = [];
-
-		pc.createDataChannel("");
-		pc.createOffer()
-		 .then(offer => pc.setLocalDescription(offer))
-		 .catch(err => reject(err));
-		pc.onicecandidate = event => {
-			if ( !event || !event.candidate ) {
-				// All ICE candidates have been sent.
-				if ( ips.length == 0 )
-					return reject('WebRTC disabled or restricted by browser');
-
-				return resolve(ips);
-			}
-
-			let parts = event.candidate.candidate.split(' ');
-			let [base,componentId,protocol,priority,ip,port,,type,...attr] = parts;
-			let component = ['rtp', 'rtpc'];
-
-			if ( ! ips.some(e => e == ip) )
-				ips.push(ip);
-
-			if ( ! logInfo )
-				return;
-
-			console.log(" candidate: " + base.split(':')[1]);
-			console.log(" component: " + component[componentId - 1]);
-			console.log("  protocol: " + protocol);
-			console.log("  priority: " + priority);
-			console.log("        ip: " + ip);
-			console.log("      port: " + port);
-			console.log("      type: " + type);
-
-			if ( attr.length ) {
-				console.log("attributes: ");
-				for(let i = 0; i < attr.length; i += 2)
-					console.log("> " + attr[i] + ": " + attr[i+1]);
-			}
-
-			console.log();
-		};
-	} );
-	</script>
-	<script>
-	let p = document.getElementById('ip');
-	findLocalIp().then(
-		ips => {
-			let s = '';
-			ips.forEach( ip => s += ip + '<br>' );
-			p.innerHTML = s;
-		},
-		err => p.innerHTML = err
-	);
-	</script>
-	</td></tr>
-</table>
-
-    </div>
- </div>
+</p>
 </div>
- 
-</div><!-- id=body -->
-</div><!-- id=page -->
+
 </body>
 </html>
 
