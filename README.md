@@ -8,7 +8,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>
+			<td valign="top">
 <ul>
 <li><a href="https://google.com">google</a></li>
 <li><a href="https://sysadmin.it-landscape.info">it-landscape.info</a></li>
@@ -21,14 +21,14 @@
 <li><a href="https://github.com/gitpod-io/openvscode-server">openVScodeSVR</a></li>
 </ul>
 			</td>
-			<td>
+			<td valign="top">
 <ul>
 <li><a href="https://youtube.com/">youtube.com</a></li>
 <li><a href="https://kshowonline.com/">kshowonline.com</a></li>
 <li><a href="https://anoboy.cc/">anoboy.cc</a></li>
 </ul>				
 			</td>
-			<td>
+			<td valign="top">
 <ul>
 <li><a href="http://javscreens.com">javscreens.com</a></li>
 <li><a href="http://93.115.24.210/?utm_source=rebrandly&utm_medium=notice">semprot</a></li>
@@ -47,8 +47,3 @@
 	</tbody>
 </table>
 	
-
-
-</body>
-</html>
-
